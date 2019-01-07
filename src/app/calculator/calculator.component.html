@@ -1,0 +1,31 @@
+
+
+<div class="main">
+    <div id="header" class="container-fluid">
+        <h2 class="text-center">  Cyrpto Ticker </h2>
+    </div>
+    <br>
+    <table style='margin-left: 10px'>
+        <tr> <td></td>
+            <td class='col2'>
+              <input  class="form-control"  id="CurrAmnt" [(ngModel)]="InputAmount" placeholder="Amount" type="number"  >
+            </td>
+            <td class='col2'>
+              <select class="form-control" id="InputCurr" name="InputCurr"  [(ngModel)]="InputCurr" (ngModelChange)="Inquiry($event)">
+                <option *ngFor="let curr of currencies" [value]="curr.name" > {{curr.name}} </option>
+              </select>
+            </td>
+            <td class='col2'> <h4 ><span class="glyphicon glyphicon-transfer"></span> </h4></td>
+            <td class='col2'><input class="form-control" disabled="true"  id="CurrAmnt"   [ngModel]="outAmount()" placeholder="Amount" type="number" ></td>
+            <td><select class="form-control"  [(ngModel)]="OutCurr" id="OutCurr" name ="OurCurr" >
+                <option *ngFor="let curr of currencies" [value]="curr.name" > {{curr.name}} </option>
+            </select> </td>
+        </tr>
+    </table>
+    <br>
+    <h6 class="text-center" *ngIf='explanation'>  1  {{InputCurr}}  =  {{this.result / this.InputAmount}} {{this.OutCurr}}</h6>
+
+
+        <br/>
+
+</div>
