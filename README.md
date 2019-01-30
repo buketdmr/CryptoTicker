@@ -1,3 +1,6 @@
+You can use the project, after run CryptoTicker-Service project for server side(It is also available in repositorty)
+
+
 # MyTickerApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
